@@ -129,7 +129,7 @@ listadoComidas.forEach(element => {
   // if(element === "pizza"){
   //   isPizza = true;
   // }
-  isPizza = (element = "pizza") ? true : false;
+  isPizza = (element = "pizza") ? true : false;  //! TERNARIO
 });
 
 // TERCERA ITERACIÓN: Si hay pizza me sirves pizza 
@@ -143,7 +143,8 @@ listadoComidas.forEach(element => {
 let hacerDieta = true;
 
 // QUINTA ITERACIÓN: Cuando quiera pizza me sirves brocoli
-hacerDieta = (!hacerDieta) ? console.log("Sírveme Pizza por favor!!") : console.log("Sírveme Brócoli en lugar de Pizza.... 😫");
+hacerDieta = (!hacerDieta) ? console.log("Sírveme Pizza por favor!!") : console.log("Sírveme Brócoli en lugar de Pizza.... 😫");  //! TERNARIO
+
 // if ( isPizza === true && hacerDieta===true){
 //   console.log("Sírveme Brócoli en lugar de Pizza.... 😫");
 // } else if ( isPizza === true && hacerDieta===false ){
