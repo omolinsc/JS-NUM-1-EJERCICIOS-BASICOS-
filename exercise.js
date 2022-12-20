@@ -163,13 +163,29 @@ console.log("EJERCICIO NÚM. 4 ---------");
 
 // PRIMERA ITERACIÓN: Declara variable con 'El rayo es el mejor'
 
+const text = "El rayo es el mejor";
+
 // SEGUNDA ITERACIÓN: Pasa ese texto a mayúsculas -> MDN es vuestro amigo
+
+const textUp = text.toUpperCase();
 
 // TERCERA ITERACIÓN: Modifica el string -> to array MDN 
 
+const words = textUp.split(" ");
+
 // CUARTA ITERACIÓN: Añade un '-' después de cada elemento
 
+const letters = [];
+for (const word of words){
+  for (const letter of word){
+    letters.push(letter);
+  }
+}
+
 // Devuelve en un string E-L-R-A-Y-O-E-S-E-L-M-E-J-O-R
+
+const result = letters.join("-");
+console.log(result);
 
 
 // * Ejercicio 5
@@ -188,6 +204,14 @@ console.log("EJERCICIO NÚM. 5 ---------");
 // 88888888
 // 999999999
 
+for (let i = 1; i < 10; i++){
+  let piramid = "";
+  for( let index = 1; index <= i; index++ ){
+    piramid += i;
+  }
+  // piramid.toString(); 
+  console.log(piramid);
+}
 
 
 // * Ejercicio 6
@@ -206,6 +230,14 @@ console.log("EJERCICIO NÚM. 6 ---------");
 // 22
 // 1
 
+for (let i = 9; i > 0; i--){
+  let piramid2 = "";
+  for( let index = 1; index <= i; index++ ){
+    piramid2 += i;
+  }
+  // piramid.toString(); 
+  console.log(piramid2);
+}
 
 
 // * Ejercicio 7 - BONUS
@@ -216,12 +248,29 @@ console.log("");
 console.log("EJERCICIO NÚM. 7 ---------");
 
 var palindrome = (word) => {
-    // PRIMERA ITERACIÓN: declarar variable y pasarle el valor + toUpperCae + Eliminar espacios replace MDN
-    var initialWord = word; // + toUpperCae + replace;
+
+    // PRIMERA ITERACIÓN: declarar variable y pasarle el valor + toUpperCase + Eliminar espacios replace MDN
+    var initialWord = word;                         //* + toUpperCae + replace;
+    
+    const upperWord = initialWord.toUpperCase();    //* uppercase
+        
     // SEGUNDA ITERACIÓN: Hacer split + reverse + join MDN
-    var reverseWord = initialWord //  Split into an array, Reverse array, Join array elements into string
+    const upperWordSplit = upperWord.split(" ");    //* remove " " and put elements in array
+    const upperWordJoin = upperWordSplit.join("");  //* join elements in a string with no separations
+    
+    //  Split into an array, Reverse array, Join ;array elements into string
+    initialWord = upperWordJoin.split("");          //* split the word to be able to do the reverse function
+
+    const initialWordTemp = initialWord;            //* store the split word into a temporary variable
+    initialWord = initialWord.join("");             //* join the initial word array to be able to use in the compare
+    
+    var reverseWord = initialWordTemp.reverse();    //* we reverse the initialWord stored in the temporary variable
+    reverseWord = reverseWord.join("");             //* join the reverseWOrd array to be able to use in the compare
+
+
     // TERCERA ITERACIÓN: Devolver true o false
     return initialWord === reverseWord ? true : false;  // check if word is palindrome
 }
+
 // CUARTA ITERACIÓN: Llamar a la función palindrome pasando una palabra o frase- 'Yo soy'
 console.log(palindrome('Yo soy') ? 'es palíndromo' : 'NO es palíndromo');
