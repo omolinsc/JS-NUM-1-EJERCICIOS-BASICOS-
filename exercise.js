@@ -64,50 +64,101 @@ console.log(media(avengersLength,mutantsLength, defendersLength));
 * → Devuelve el string de mayor longitud
 */
 
+console.log("");
+console.log("EJERCICIO NÚM. 1 ---------");
+
 // Declaramos un array -> Cambiar nombre de myArray al vuestro e introducimos valores
-var myArray = [];
+var nombres = ["Oriol", "Alejandro", "Marcos", "Paula", "Miguelángel", "José María"];
 // Declaramos una variable donde guardaremos el string mayor de nuestro myArray
 var longestElement= '';
 // PRIMERA ITERACIÓN: Recorrer el Array y comprobar la longitud de cada uno de ellos.
-myArray.forEach( (element) => {
+nombres.forEach( (element) => {
     // SEGUNDA ITERACIÓN: Si longestElement es mayor a relement cambiamos el valor de longestElement
-    if() {
+    if(element.length > longestElement.length) {
         longestElement = element
     }
 });
 // TERCERA ITERACIÓN MOSTRAR EL ELEMENTO MAYOR
-console.log(longestElement);
+console.log("EJERCICIO 1 : ", longestElement);
 
 /* 
 * Ejercicio 2
 * → Devuelve si puedes conducir
 */
 
+console.log("");
+console.log("EJERCICIO NÚM. 2 ---------");
+
 // PRIMERA ITERACIÓN: Declara variable age
+const age = 20;
+const tieneCarnet = true;
+let puedeConducir = false;
 
 // SEGUNDA ITERACIÓN: Comprobar con un condicional si puedes conducir
+if (age >= 18 && tieneCarnet===true){
+  puedeConducir = true;
+} else {
+  puedeConducir = false;
+};
 
 // TERCERA ITERACIÓN: Mostrar si puede conducir o no
+
+if (puedeConducir === true){
+  console.log("FELICIDADES!!!! - - PUEDES CONDUCIR!!!!")
+};
+
+if (puedeConducir === false){
+  console.log("WARNING!!!! - - NO PUEDES CONDUCIR!!!!")
+}
 
 /* 
 * Ejercicio 3
 * → Quiero comer Pizza
 */
 
+console.log("");
+console.log("EJERCICIO NÚM. 3 ---------");
+
 // PRIMERA ITERACIÓN: Declara variable con un listado de comidas
+const listadoComidas = ["pizza", "ensalada", "macarrones", "kebab", "sushi", "bocadillo"];
 
 // SEGUNDA ITERACIÓN: Recorrer el listado de comidas
 
+let isPizza = false;
+listadoComidas.forEach(element => {
+  // if(element === "pizza"){
+  //   isPizza = true;
+  // }
+  isPizza = (element = "pizza") ? true : false;
+});
+
 // TERCERA ITERACIÓN: Si hay pizza me sirves pizza 
 
+//! if ( isPizza === true){
+//!   console.log("Sírveme Pizza por favor!!");
+//! }
+//! está dentro de la QUINTA ITERACIÓN
+
 // CUARTA ITERACIÓN: Declara variable estoy a dieta
+let hacerDieta = true;
 
 // QUINTA ITERACIÓN: Cuando quiera pizza me sirves brocoli
+hacerDieta = (!hacerDieta) ? console.log("Sírveme Pizza por favor!!") : console.log("Sírveme Brócoli en lugar de Pizza.... 😫");
+// if ( isPizza === true && hacerDieta===true){
+//   console.log("Sírveme Brócoli en lugar de Pizza.... 😫");
+// } else if ( isPizza === true && hacerDieta===false ){
+//   console.log("Sírveme Pizza por favor!!");
+// };
+
+
 
 /* 
-* Ejercicio 3
+* Ejercicio 4
 * → E-L-R-A-Y-O-E-S-E-L-M-E-J-O-R
 */
+
+console.log("");
+console.log("EJERCICIO NÚM. 4 ---------");
 
 // PRIMERA ITERACIÓN: Declara variable con 'El rayo es el mejor'
 
@@ -119,39 +170,49 @@ console.log(longestElement);
 
 // Devuelve en un string E-L-R-A-Y-O-E-S-E-L-M-E-J-O-R
 
-/* 
-* Ejercicio 4
-* → La piramide - imprime por consola:
-1
-22
-333
-4444
-55555
-666666
-7777777
-88888888
-999999999
-*/
 
-/* 
-* Ejercicio 5
-* → La piramide Invertida- imprime por consola:
-999999999
-88888888
-7777777
-666666
-55555
-4444
-333
-22
-1
-*/
+// * Ejercicio 5
+// * → La piramide - imprime por consola:
 
-/* 
-* Ejercicio 6 - BONUS
-* → Palíndromo: Esta función debe recibir un string y decir si es un palíndromo. 
-* Un palíndromo es una frase que se lee igual al derecho que al revés.
-*/
+console.log("");
+console.log("EJERCICIO NÚM. 5 ---------");
+
+// 1
+// 22
+// 333
+// 4444
+// 55555
+// 666666
+// 7777777
+// 88888888
+// 999999999
+
+
+
+// * Ejercicio 6
+// * → La piramide Invertida- imprime por consola:
+
+console.log("");
+console.log("EJERCICIO NÚM. 6 ---------");
+
+// 999999999
+// 88888888
+// 7777777
+// 666666
+// 55555
+// 4444
+// 333
+// 22
+// 1
+
+
+
+// * Ejercicio 7 - BONUS
+// * → Palíndromo: Esta función debe recibir un string y decir si es un palíndromo. 
+// * Un palíndromo es una frase que se lee igual al derecho que al revés.
+
+console.log("");
+console.log("EJERCICIO NÚM. 7 ---------");
 
 var palindrome = (word) => {
     // PRIMERA ITERACIÓN: declarar variable y pasarle el valor + toUpperCae + Eliminar espacios replace MDN
